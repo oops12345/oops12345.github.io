@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9 字
+      572 字
     </span>
   
 
@@ -222,9 +222,170 @@
             <h1 style="display: none">java学习指北</h1>
             
             <div class="markdown-body">
-              <h2 id="Java-基础知识"><a href="#Java-基础知识" class="headerlink" title="Java 基础知识"></a>Java 基础知识</h2><blockquote>
+              <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><blockquote>
 <p>参考java guide</p>
 </blockquote>
+<h2 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a>java基础</h2><ol>
+<li><p>java语言的特点 </p>
+<ul>
+<li>面向对象 </li>
+<li>封装、继承、多态</li>
+<li>健壮性</li>
+<li>跨平台性 （jvm虚拟机的存在）</li>
+</ul>
+</li>
+<li><p>Java的核心机制</p>
+<ul>
+<li><p>jvm虚拟机 （java virtual Machine）</p>
+</li>
+<li><p>垃圾回收机制 （Garbage Collection）</p>
+<blockquote>
+<p> 垃圾回收在java程序运行过程中自动运行 </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>java环境配置</p>
+<ul>
+<li>明确 jdk jre </li>
+<li>jdk的下载 、安装</li>
+<li>配置环境变量</li>
+<li>验证安装</li>
+<li>选择合适的ide进行程序的开发（idea 、Eclipse）</li>
+</ul>
+</li>
+<li><p>java的注释</p>
+<ul>
+<li>单行注释  格式：// 注释文字</li>
+<li>多行注释 格式：/* 注释文字 */</li>
+<li>文档注释 （Java独有）</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>/**</p>
+<p>@author 指定该程序的作者</p>
+<p>@version 指定该程序的版本 </p>
+<p>*/</p>
+</blockquote>
+<ol start="5">
+<li><div class="code-wrapper"><pre><code>//行尾风格
+public class Test &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(&quot;Block Style!&quot;);
+    &#125;
+&#125; 
+</code></pre></div>
+</li>
+<li><p>Java的API文档 </p>
+<p>API（Application Programming interface）java 提供的基本编程接口</p>
+</li>
+</ol>
+<blockquote>
+<p>两个核心概念 ： 对象  类</p>
+</blockquote>
+<blockquote>
+<p>三大特性：封装 继承 多态</p>
+</blockquote>
+<ul>
+<li><p>System.out.println()和 System.out.print()的区别</p>
+</li>
+<li><p>设置环境变量的原因 ：</p>
+<blockquote>
+<p>目的是为了在控制台的任何路径下都可以调用jdk的指令</p>
+</blockquote>
+</li>
+<li><p>jdk jvm jre的关系</p>
+</li>
+</ul>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="关键字（keyword）"><a href="#关键字（keyword）" class="headerlink" title="关键字（keyword）"></a>关键字（keyword）</h4><p>被java赋予了特殊含义的，用作专门用途的字符串</p>
+<p>都是小写的 </p>
+<ul>
+<li><p>用于定义数据类型的关键字</p>
+<blockquote>
+<p>class    interface    enum    void</p>
+</blockquote>
+<blockquote>
+<p>byte     short     int     long     double     float     char     Boolean</p>
+</blockquote>
+</li>
+<li><p>  用于定义流程控制的关键字</p>
+</li>
+</ul>
+<blockquote>
+<p>if    else</p>
+</blockquote>
+<blockquote>
+<p>switch     case     default</p>
+</blockquote>
+<blockquote>
+<p>while     do</p>
+</blockquote>
+<blockquote>
+<p>for     break     continue</p>
+</blockquote>
+<blockquote>
+<p>return     </p>
+</blockquote>
+<ul>
+<li><p>定义访问权限的关键字</p>
+<blockquote>
+<p>private    protected    public</p>
+</blockquote>
+</li>
+<li><p>定义函数、类、变量修饰符的关键字</p>
+<blockquote>
+<p>abstract    final    static    synchronized</p>
+</blockquote>
+</li>
+<li><p>定义类与类之间的关系的关键字</p>
+<blockquote>
+<p>extend    implements</p>
+</blockquote>
+</li>
+<li><p>用于定义实例及引用实例、判断实例的关键字</p>
+<blockquote>
+<p>new    this    super    instance of</p>
+</blockquote>
+</li>
+<li><p>定义异常处理的关键字</p>
+<blockquote>
+<p>try    catch</p>
+</blockquote>
+<blockquote>
+<p>finally </p>
+</blockquote>
+<blockquote>
+<p>throw     throws</p>
+</blockquote>
+</li>
+<li><p>用于包的关键字</p>
+<blockquote>
+<p>package</p>
+</blockquote>
+</li>
+<li><p>其他</p>
+<blockquote>
+<p>native    strictfp    transient    volatile    assert</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>保留字 ：goto    const等</p>
+</blockquote>
+<h4 id="标识符（identifier）"><a href="#标识符（identifier）" class="headerlink" title="标识符（identifier）"></a>标识符（identifier）</h4><p>凡是可以自己起名字的地方都叫标识符</p>
+<ul>
+<li>标识符的命名规范</li>
+</ul>
+<p>java中的名称的命名规范</p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><blockquote>
+<p>基本数据类型    基本数据类型变量间转换    基本数据类型与String转换    进制与进制间的转换</p>
+</blockquote>
+<ul>
+<li>概念</li>
+</ul>
+<p>变量是内存中的一个区域</p>
+<p>该区域的数据可以在同一类型范围内不断变化</p>
 
             </div>
             <hr>
