@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;light&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="奶提子">
+  <meta name="keywords" content="">
+  
+  <title>MD语法 - 奶提子</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"3vCXMeVQomRrlBW3ytnNMFgT-gzGzoHsz","app_key":"KMWEap96igcYYLgbf3TnePwN","server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>奶提子</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="MD语法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-02 20:05" pubdate>
+        2021年7月2日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MD语法</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<h2 id="快捷键基于软件Typora"><a href="#快捷键基于软件Typora" class="headerlink" title="快捷键基于软件Typora"></a>快捷键基于软件Typora</h2></blockquote>
+<blockquote>
+<h2 id="为了跳出上一个格式-切换源代码格式"><a href="#为了跳出上一个格式-切换源代码格式" class="headerlink" title="为了跳出上一个格式 切换源代码格式"></a>为了跳出上一个格式 切换源代码格式</h2><h2 id="快捷键：-CTRL"><a href="#快捷键：-CTRL" class="headerlink" title="快捷键： CTRL + /"></a>快捷键： CTRL + /</h2></blockquote>
+<h1 id="基本符号"><a href="#基本符号" class="headerlink" title="基本符号"></a>基本符号</h1><blockquote>
+<h5 id="gt"><a href="#gt" class="headerlink" title="* - +. &gt;"></a>* - +. &gt;</h5></blockquote>
+<blockquote>
+<p>基本上所有的markdown标记都是基于这四个符号或组合，需要注意的是，如果以基本符号开头的标记，注意基本符号后有一个用于分割标记符和内容的空格。</p>
+</blockquote>
+<h1 id="标题-（六级）"><a href="#标题-（六级）" class="headerlink" title="标题 （六级）"></a>标题 （六级）</h1><blockquote>
+<p>快捷键 CTRL +1、2、3、4、5、6</p>
+</blockquote>
+<blockquote>
+<p>格式：# [空格] [文字]，标题级别取决于#个数</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs xml"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题</code></pre></div>
+
+<blockquote>
+<div class="code-wrapper"><pre><code>   # 一级标题
+</code></pre></div>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6></blockquote>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
+<li><blockquote>
+<h4 id="快捷键：CTRL-shift"><a href="#快捷键：CTRL-shift" class="headerlink" title="快捷键：CTRL +shift + ]"></a>快捷键：CTRL +shift + ]</h4></blockquote>
+</li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs swift"><span class="hljs-comment">//形式一</span>
+<span class="hljs-operator">+</span> a
+<span class="hljs-operator">+</span> b
+<span class="hljs-operator">+</span> c
+<span class="hljs-comment">//形式二</span>
+<span class="hljs-operator">-</span> d
+<span class="hljs-operator">-</span> e
+<span class="hljs-operator">-</span> f
+<span class="hljs-comment">//形式三</span>
+<span class="hljs-operator">*</span> g
+<span class="hljs-operator">*</span> h
+<span class="hljs-operator">*</span> i</code></pre></div>
+
+<blockquote>
+<p>三种形式实例</p>
+</blockquote>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c<ul>
+<li>1</li>
+<li>2</li>
+<li>3<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ul>
+<li><blockquote>
+<h4 id="快捷键：CTRL-shift-1"><a href="#快捷键：CTRL-shift-1" class="headerlink" title="快捷键：CTRL +shift + ["></a>快捷键：CTRL +shift + [</h4></blockquote>
+</li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs cpp"><span class="hljs-comment">//正常形式</span>
+<span class="hljs-number">1.</span> abc
+<span class="hljs-number">2.</span> bcd
+<span class="hljs-number">3.</span> cde
+<span class="hljs-comment">//错序效果</span>
+<span class="hljs-number">2.</span> fgh
+<span class="hljs-number">3.</span> ghi
+<span class="hljs-number">5.</span> hij</code></pre></div>
+
+<blockquote>
+<p>形式实例：</p>
+</blockquote>
+<ol>
+<li>1</li>
+<li>2</li>
+<li> 3</li>
+<li>2<ol start="3">
+<li>3<ol start="5">
+<li>w</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="嵌套列表"><a href="#嵌套列表" class="headerlink" title="嵌套列表"></a>嵌套列表</h2><blockquote>
+<h1 id="不再赘述"><a href="#不再赘述" class="headerlink" title="不再赘述"></a>不再赘述</h1></blockquote>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote>
+<h3 id="快捷键-：CTRL-SHIFT-Q"><a href="#快捷键-：CTRL-SHIFT-Q" class="headerlink" title="快捷键 ：CTRL +SHIFT + Q"></a>快捷键 ：CTRL +SHIFT + Q</h3></blockquote>
+<blockquote>
+<h1 id="gt-引用"><a href="#gt-引用" class="headerlink" title="&gt; 引用"></a>&gt; 引用</h1></blockquote>
+<blockquote>
+<p>引用</p>
+</blockquote>
+<blockquote>
+<div class="code-wrapper"><pre><code class="hljs undefined">&gt; 引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</code></pre></div>
+
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs ruby">&gt; 一级引用
+<span class="hljs-meta">&gt;&gt;</span> 二级引用
+&gt;&gt;&gt; 三级引用
+&gt;&gt;&gt;&gt; 四级引用
+&gt;&gt;&gt;&gt;&gt; 五级引用
+&gt;&gt;&gt;&gt;&gt;&gt; 六级引用</code></pre></div>
+
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="一行代码"><a href="#一行代码" class="headerlink" title="一行代码"></a>一行代码</h2><blockquote>
+<p>快捷键 ：CTRL +shift + `</p>
+</blockquote>
+<blockquote>
+<h1 id="code"><a href="#code" class="headerlink" title=" code"></a><code> code</code></h1></blockquote>
+<div class="code-wrapper"><pre><code class="hljs go"><span class="hljs-string">` code`</span></code></pre></div>
+
+<h2 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a>多行代码</h2><p>快捷键 ：CTRL +SHIFT + K</p>
+<div class="code-wrapper"><pre><code class="hljs go"><span class="hljs-string">``</span><span class="hljs-string">`</span>
+<span class="hljs-string">    123</span>
+<span class="hljs-string">    123</span>
+<span class="hljs-string">    123</span>
+<span class="hljs-string">    123</span>
+<span class="hljs-string">    123</span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span></code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs">123
+123
+123
+123
+123</code></pre></div>
+
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>快捷键 ：</p>
+<ol>
+<li><p>行内式<br>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来</p>
+<div class="code-wrapper"><pre><code class="hljs csharp">[<span class="hljs-meta">文字</span>](https:<span class="hljs-comment">//www.jianshu.com),</span></code></pre></div></li>
+<li><p>参数式<br>链接的文字放在[]中，链接地址放在随后的:后，链接地址后面空一格，然后用引号引起来</p>
+</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs csharp">[<span class="hljs-meta">简书</span>]: https:<span class="hljs-comment">//www.jianshu.com &quot;创作你的创作&quot;</span>
+[<span class="hljs-meta">简书</span>]是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。
+<span class="hljs-comment">//参数定义的其他写法</span>
+[<span class="hljs-meta">简书</span>]: https:<span class="hljs-comment">//www.jianshu.com &#x27;创作你的创作&#x27;</span>
+[<span class="hljs-meta">简书</span>]: https:<span class="hljs-comment">//www.jianshu.com (创作你的创作)</span>
+[<span class="hljs-meta">简书</span>]: &lt;https:<span class="hljs-comment">//www.jianshu.com&gt; &quot;创作你的创作&quot;</span></code></pre></div>
+
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
+<li>行内式<br>和链接的形式差不多，图片的名字放在[]中，图片地址放在随后的()中，title属性（图片地址后面空一格，然后用引号引起来）,注意的是[]前要加上!</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs ruby">![图片名称](图片链接)</code></pre></div>
+
+<ol>
+<li>参数式<br>图片的文字放在[]中，图片地址放在随后的:后，title属性（图片地址后面空一格，然后用引号引起来）,注意引用图片的时候在[]前要加上!</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs csharp">[<span class="hljs-meta">my-logo.png</span>]: https:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 &quot;my-logo&quot;</span>
+![my-logo.png]
+<span class="hljs-comment">//参数定义的其他写法</span>
+[<span class="hljs-meta">my-logo.png</span>]: https:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 &#x27;my-logo&#x27;</span>
+[<span class="hljs-meta">my-logo.png</span>]: https:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 (my-logo)</span>
+[<span class="hljs-meta">my-logo.png</span>]: &lt;https:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&gt; &quot;my-logo&quot;</span></code></pre></div>
+
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以</p>
+<div class="code-wrapper"><pre><code class="hljs undefined">---
+- - -
+------
+***
+* * *
+******
+___
+_ _ _
+______</code></pre></div>
+
+<h1 id="强调字体"><a href="#强调字体" class="headerlink" title="强调字体"></a>强调字体</h1><ol>
+<li><p>强调字体<br>一个星号或者是一个下划线包起来，会转换为<em>倾斜，如果是2个，会转换为<strong>加粗</p>
+<div class="code-wrapper"><pre><code class="hljs undefined">*md*    
+**md**
+_md_   
+ __md__</code></pre></div></li>
+</ol>
+<p><em>md</em><br><strong>md</strong><br><em>md</em><br> <strong>md</strong></p>
+<h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><blockquote>
+<h1 id="快捷键：-alt-shift-5"><a href="#快捷键：-alt-shift-5" class="headerlink" title="快捷键： alt +shift + 5"></a>快捷键： alt +shift + 5</h1></blockquote>
+<div class="code-wrapper"><pre><code class="hljs undefined">~~删除~~</code></pre></div>
+
+<p><del>删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线删除线</del></p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><div class="code-wrapper"><pre><code class="hljs cpp"><span class="hljs-comment">//例子一</span>
+|<span class="hljs-number">123</span>|<span class="hljs-number">234</span>|<span class="hljs-number">345</span>|
+|:-|:-:|-:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+<span class="hljs-comment">//例子二</span>
+|<span class="hljs-number">123</span>|<span class="hljs-number">234</span>|<span class="hljs-number">345</span>|
+|:---|:---:|---:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+<span class="hljs-comment">//例子三</span>
+<span class="hljs-number">123</span>|<span class="hljs-number">234</span>|<span class="hljs-number">345</span>
+:-|:-:|-:
+abc|bcd|cde
+abc|bcd|cde
+abc|bcd|cde</code></pre></div>
+
+<blockquote>
+<h1 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h1></blockquote>
+<p>//例子一</p>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">234</th>
+<th align="right">345</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">//例子二</td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">123</td>
+<td align="center">234</td>
+<td align="right">345</td>
+</tr>
+<tr>
+<td align="left">:—</td>
+<td align="center">:–:</td>
+<td align="right">—:</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">//例子三</td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">123</td>
+<td align="center">234</td>
+<td align="right">345</td>
+</tr>
+<tr>
+<td align="left">:—</td>
+<td align="center">:–:</td>
+<td align="right">—:</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+</tbody></table>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Md/">Md</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/07/02/Java%E9%9D%A2%E8%AF%95/">
+                        <span class="hidden-mobile">Java面试</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"3vCXMeVQomRrlBW3ytnNMFgT-gzGzoHsz","appKey":"KMWEap96igcYYLgbf3TnePwN","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <h6 style="text-align:center">Copyright © 2021-2099 Milk_raisins. All rights reserved.</h6>  
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
