@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      576 字
+      880 字
     </span>
   
 
@@ -222,7 +222,7 @@
             <h1 style="display: none">Hexo搭建个人博客</h1>
             
             <div class="markdown-body">
-              <h1 id="exo-个人博客搭建"><a href="#exo-个人博客搭建" class="headerlink" title="exo 个人博客搭建"></a>exo 个人博客搭建</h1><blockquote>
+              <h1 id="Hexo-个人博客搭建"><a href="#Hexo-个人博客搭建" class="headerlink" title="Hexo 个人博客搭建"></a>Hexo 个人博客搭建</h1><blockquote>
 <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2></blockquote>
 <h3 id="1-安装必要组件"><a href="#1-安装必要组件" class="headerlink" title="1. 安装必要组件"></a>1. 安装必要组件</h3><blockquote>
 <p>具有时效性，最好是安装最新的版本</p>
@@ -271,11 +271,18 @@
 <p>error：git：The authenticity of host ‘github.com (13.250.177.223)’ can’t be established.  </p>
 <p>在Are you sure you want to continue connecting (yes/no/[fingerprint])?    后输入yes 回车 即可解决</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Wbiokr/article/details/73431199">参考地址</a></p>
+<h3 id="5-绑定域名"><a href="#5-绑定域名" class="headerlink" title="5.绑定域名"></a>5.绑定域名</h3></li>
+<li><p>申请注册域名（以阿里云为例）</p>
+</li>
+<li><p>在阿里云的控制台设置域名解析</p>
 </li>
 </ul>
 <blockquote>
+<p>这时候你的项目根目录应该会出现一个名为<code>CNAME</code>的文件了。如果没有的话，打开你本地博客<code>/source</code>目录，新建<code>CNAME</code>文件，注意没有后缀。然后在里面写上你的域名，保存。最后运行<code>hexo g</code>、<code>hexo d</code>上传到github。</p>
+</blockquote>
+<blockquote>
 <h2 id="主题部分"><a href="#主题部分" class="headerlink" title="主题部分"></a>主题部分</h2></blockquote>
-<h3 id="5-更换主题及相关修改"><a href="#5-更换主题及相关修改" class="headerlink" title="5. 更换主题及相关修改"></a>5. 更换主题及相关修改</h3><ul>
+<h3 id="6-更换主题及相关修改"><a href="#6-更换主题及相关修改" class="headerlink" title="6. 更换主题及相关修改"></a>6. 更换主题及相关修改</h3><ul>
 <li><p><del>更换matery主题，参考官方<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">Github仓库</a>进行设置</del></p>
 </li>
 <li><p><del>下载</del></p>
@@ -298,9 +305,44 @@
 </ul>
 <blockquote>
 <h4 id="选择更换fluid主题-嘿嘿。"><a href="#选择更换fluid主题-嘿嘿。" class="headerlink" title="选择更换fluid主题 嘿嘿。"></a>选择更换fluid主题 嘿嘿。</h4></blockquote>
+<blockquote>
+<p>参考fluid主题的官方配置 <a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/">Fluid</a></p>
+</blockquote>
+<ol>
+<li><p>主题安装</p>
 <ul>
-<li>参考fluid主题的官方配置 ! (hahah)[<a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/guide/]">https://fluid-dev.github.io/hexo-fluid-docs/guide/]</a></li>
+<li><p><strong>NPM安装</strong></p>
+<p><strong>Hexo 5.0.0</strong> 版本以上，推荐通过 npm 直接安装，在hexo的根目录的Git bash here，输入命令如下</p>
+<div class="code-wrapper"><pre><code class="hljs bash">npm install --save hexo-theme-fluid</code></pre></div>
+
+<p>然后在根目录的插件目录找到下载的主题文件夹，然后在博客目录下创建 <code>_config.fluid.yml</code>，将fluid主题根目录的 _config.yml 内容复制过去</p>
+</li>
+<li><p>下载安装</p>
+<p>下载最新的<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/releases/tag/v1.8.11">release</a>版本，在根目录的theme文件夹下解压，将文件夹重命名 </p>
+</li>
 </ul>
+</li>
+<li><p>主题使用</p>
+<ul>
+<li><p>在根目录的<code>_config.yml</code>下的如下位置</p>
+<p>指定为fluid</p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>至此 通过hexo g 对更换主题后进行重新构建， hexo s开启本地服务器 查看结果</p>
+</blockquote>
+<blockquote>
+<h2 id="基于主题的细节修改"><a href="#基于主题的细节修改" class="headerlink" title="基于主题的细节修改"></a>基于主题的细节修改</h2></blockquote>
+<ol>
+<li>创建相关页面</li>
+<li>首页 </li>
+<li>写文章</li>
+<li>评论插件 （leanCloud）</li>
+<li>人数统计</li>
+<li></li>
+</ol>
 
             </div>
             <hr>
